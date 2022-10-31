@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contene2r">
+    <div class="d-inline-block">
+        <img class="preloader-logo" src="{% static 'img/logo.png' %}" alt="">
+    </div>
+</div>
+<div class="container-fluid bg-bd-l p-5 mt-5">
+    <div class="loader"></div>
+    <div class="row">
+        {% for i in datos %}
+        <div class="col-lg-2 col-md-6 col-12 mb-4">
+            <form class="puntero" onclick="this.submit();cargador();" action="{% url 'episodios' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="linkPagina" value="{{ i.link }}">
+                <input type="hidden" name="imagenAnime" value="{{ i.portada }}">
+                <input type="hidden" name="tituloAnime" value="{{ i.titulo }}">
+                <div class="card alturaCard p-2 zoom">
+                    <img src="{{ i.portada }}" alt="" class="card-img">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ i.titulo }}</h6>
+                    </div>
+                </div>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
