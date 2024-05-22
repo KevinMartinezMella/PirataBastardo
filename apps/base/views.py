@@ -9,7 +9,26 @@ import requests as r
 import os
 
 def inicio(request):
-    return render(request, 'inicio.html')
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+    paginaPrincipal = 'https://www3.animeflv.net'
+    busqueda = r.get(paginaPrincipal, headers=headers)
+    soup = bs(busqueda.text, 'html.parser')
+    # ultimos = soup.find_all('article', class_='Anime')
+    # print(ultimos)
+    titulos = soup.find_all('article', class_='Anime')
+    # print(titulos)
+    listaDic = []
+
+    for titulo in titulos:
+        a = titulo.find('a').get('href')
+        img = titulo.find('img').get('src')
+        b = titulo.find('h3', class_='Title')
+        diccionario = dict(titulo=b.text.strip(),link=f'{paginaPrincipal}{a}',portada=img)
+        listaDic.append(diccionario)
+    context = {
+        'animes':listaDic
+    }
+    return render(request, 'iniciov2.html', context)
 
 def anime(request):
     if request.method == 'POST':
@@ -55,12 +74,13 @@ def verAnime(request):
         # navegador = wd.Chrome(service=Service(r'C:\Users\Kevin Martínez\AppData\Local\chromedriver\chromedriver.exe'), options=chromeOp)
 
         chromeOp = Options()
-        chromeOp.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        # chromeOp.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         chromeOp.headless=True
         chromeOp.add_argument('--disable-gpu')
         chromeOp.add_argument('--no-sandbox')
         chromeOp.add_argument('user-agent=fake-useragent')
-        navegador = wd.Chrome(service=Service(os.environ.get("CHROMEDRIVER_PATH")), options=chromeOp)
+        # navegador = wd.Chrome(service=Service(os.environ.get("CHROMEDRIVER_PATH")), options=chromeOp)
+        navegador = wd.Chrome(service=Service(r'C:\Users\kevin\Desktop\pirata\chromedriver.exe'), options=chromeOp)
 
 
         navegador.get(linkPagina)

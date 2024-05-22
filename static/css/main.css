@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav {
+    background:linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,1));
+}
+.elementoCarrusel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 50px;
+}
+.imagenCarrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sombreado {
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1));
+    position: relative;
+    margin-top: -1000px;
+    height: 1000px;
+}
+.fondoNegro {
+    background-color: #000;
+}
+.logoAnime {
+    position: absolute;
+    bottom: 90px;
+    z-index: 999;
+}
+.textoAnime {
+    position: absolute;
+    bottom: 100px;
+    z-index: 999;
+}
+.botonPlay {
+    border-radius: 100%;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.fondoPrincipal {
+    background-color: #1d6d8f;
+}
+.botonPlay:hover {
+    color: #2698c9;
+    border: 1px solid #2698c9;
+}
+@media(max-width: 450px) {
+    .logoAnime {
+        width: 250px;
+    }
+}
+.slick-dots {
+    background-color: black;
+    padding: 25px !important;
+}
+.slick-dots li button::before {
+    color: #fff !important;
+    font-size: 14px;
+}
+.slick-track {
+    background-color: black !important;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.ultimos .slick-track
+{
+    display: flex !important;
+}
+
+.ultimos .slick-slide
+{
+    height: inherit !important;
+}

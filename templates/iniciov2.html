@@ -1,0 +1,143 @@
+{% extends 'base/basev2.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="carruselPrincipal">
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_sao.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img src="{% static 'img/logo/logo_sao.png' %}" width="500" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Sword Art Online - Alicization</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_kimetsu.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="300" src="{% static 'img/logo/logo_kimetsu.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Demon Slayer - Entertaiment District</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_jujutsu.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_jujutsu.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Jujutsu Kaisen</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_onepiece.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_onepiece.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>One Piece - The Peak</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_overlord.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_overlord.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Overlord - Temporada 4</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_spy.png' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_spy.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Spy x Family - Code White</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_naruto.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_naruto.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya disponible <b>Naruto Shippuden</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+        <div class="elementoCarrusel">
+            <img class="imagenCarrusel" src="{% static 'img/carrusel/banner_db.jpg' %}" alt="">
+            <div class="logoAnime ms-5">
+                <img width="400" src="{% static 'img/logo/logo_dragon_super.png' %}" alt="">
+                <h5 class="text-light mt-3">Ya Disponible <b>Dragon Ball Super - Super Hero</b></h5>
+                <div class="d-flex">
+                    <div class="botonPlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <button class="btn btn-outline-light ms-4">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+            <div class="sombreado"></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 vh-100 fondoNegro p-5">
+        <h2 class="text-light pt-2 mb-0">Ultimos Agregados</h2>
+        <div class="ultimos mt-5">
+            {% for anime in animes %}
+            <div class="p-3 d-flex align-items-stretch">
+                <form class="puntero h-100" onclick="this.submit();cargador();" action="{% url 'episodios' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="linkPagina" value="{{ anime.link }}">
+                    <input type="hidden" name="imagenAnime" value="{{ anime.portada }}">
+                    <input type="hidden" name="tituloAnime" value="{{ anime.titulo }}">
+                    <div class="card alturaCard pt-2 pe-2 ps-2 pb-0 zoom h-100">
+                        <img src="https://www3.animeflv.net{{ anime.portada }}" alt="" class="card-img">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ anime.titulo }}</h6>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
