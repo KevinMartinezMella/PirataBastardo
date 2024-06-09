@@ -80,7 +80,7 @@ def verAnime(request):
         chromeOp.add_argument('--no-sandbox')
         chromeOp.add_argument('user-agent=fake-useragent')
         # navegador = wd.Chrome(service=Service(os.environ.get("CHROMEDRIVER_PATH")), options=chromeOp)
-        navegador = wd.Chrome(service=Service(r'C:\Users\kevin\Desktop\pirata\chromedriver.exe'), options=chromeOp)
+        navegador = wd.Chrome(service=Service(r'C:\Users\ZShadowOfChrisZ\Desktop\PirataBastardo\chromedriver.exe'), options=chromeOp)
 
 
         navegador.get(linkPagina)

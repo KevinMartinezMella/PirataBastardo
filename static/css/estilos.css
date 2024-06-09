@@ -23,13 +23,12 @@ html, body {
 }
 
 .bg-bd{
-    background-color: #310873;
+    background-color: rgb(30, 38, 46);
 }
 
 .bg-bd-l{
-    background: linear-gradient(#4e12ad, #7429ed);
+    background: lightslategray;
     min-height: 95vh;
-    /* background-color: #4e12ad; */
 }
 .v-top{
     vertical-align: top;
@@ -100,9 +99,6 @@ nav{
 .preloader-logo {
     width: 150px;
     height: 150px;
-    /* right: 10px; */
-    /* border: 10px solid rgb(255, 255, 255); */
-    /* border-top: 10px solid #310873; */
     border-radius: 50%;
     animation-name: girar;
     animation-duration: 2s;
@@ -110,17 +106,6 @@ nav{
     animation-timing-function: linear;
   }
 
-/* .preloader {
-    width: 70px;
-    height: 70px;
-    border: 10px solid rgb(255, 255, 255);
-    border-top: 10px solid #310873;
-    border-radius: 50%;
-    animation-name: girar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  } */
 @keyframes girar {
     from {
       transform: rotate(0deg);

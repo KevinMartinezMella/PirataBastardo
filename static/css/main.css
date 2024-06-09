@@ -57,6 +57,19 @@ nav {
     color: #2698c9;
     border: 1px solid #2698c9;
 }
+
+.puntero{
+    cursor: pointer;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
 @media(max-width: 450px) {
     .logoAnime {
         width: 250px;

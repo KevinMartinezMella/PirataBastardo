@@ -5,20 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
-    <!-- Bootstrap Css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Css -->
     <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>El Pirata Bastardo - Anime</title>
 </head>
 <body>
-<!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-bd fixed-top">
-    <a class="navbar-brand" href="{% url 'inicio' %}"><img class="logo-nav" src="{% static 'img/logo.png' %}" alt=""></span>&nbsp;&nbsp;El Pirata Bastardo</a>
+    <a href="{% url 'inicio' %}"><img src="{% static 'img/pirata_logo.png' %}" height="50" width="50" alt=""> &nbsp; <h5 class="mb-0"><b class="text-light">El Gato Pirata</b></h5>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,9 +23,6 @@
             <li class="nav-item active">
             <a class="nav-link" href="#">Animes<span class="sr-only">(current)</span></a>
             </li>
-            <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Peliculas</a>
-            </li> -->
             &nbsp;
             &nbsp;
             <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'busqueda' %}">
@@ -39,14 +32,6 @@
             </form>
             &nbsp;
             &nbsp;
-            <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Registrarse</a>
-            </li>
-            &nbsp;
-            &nbsp;
-            <li class="nav-item">
-            <a class="nav-link btn btn-primary text-light" href="#">Iniciar Sesión</a>
-            </li> -->
         </ul>
     </div>
 </nav>
